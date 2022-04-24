@@ -5,4 +5,4 @@ Config files for my GitHub profile.
 
 ## my web
 
-Whh-32.github.io
+https://Whh-32.github.io
