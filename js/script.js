@@ -16,6 +16,10 @@ function checkScroll() {
 
 for (let i = 0; i < customScroll.length; i++) {
     customScroll[i].addEventListener("click", () => {
-        window.scrollTo(0, parts[i].offsetTop)
+        window.scrollTo(0, parts[i].offsetTop);
+        customScroll.forEach(element => {
+            element.classList.remove("active");
+        });
+        customScroll[i].classList.add("active");
     })
 }
