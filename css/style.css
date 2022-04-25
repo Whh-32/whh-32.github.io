@@ -1,5 +1,5 @@
 :root {
-    --darkColor: #585856;
+    --darkColor: #555554;
     --darkInDark: #797979;
     --lightColor: #ececec;
     --lightInLight: #dbdbdb;
@@ -24,6 +24,8 @@ header {
     height: 70px;
     position: fixed;
     z-index: 1000;
+    top: 0px;
+    transition: all 500ms;
 }
 
 .header {
@@ -80,6 +82,7 @@ header {
 }
 
 /********************************** main ****************************/
+/**************************** light parts ***********************/
 
 .main {
     width: 100%;
@@ -162,7 +165,42 @@ header {
     width: 500px;
 }
 
+/********************************** dark parts ******************************/
+
+.dark {
+    background-color: var(--darkColor);
+}
+
+.dark >.leftParts > .pageNumber > span {
+    color: var(--darkInDark);
+}
+
+.dark > .leftParts > .yLine > span {
+    background-color: rgb(230, 230, 230);
+}
+
+.dark > .leftParts > .text  {
+    color: rgb(212, 212, 212);   
+}
+
+.dark > .rightParts > .title > span {
+    color: rgb(255, 255, 255);
+}
+
+.dark > .rightParts > .xLine {
+    background-color: rgb(255, 255, 255);
+}
+
+.rightParts > .description {
+    color: rgb(185, 185, 185);
+    font-size: 16px;
+    width: 500px;
+}
 /******************************* custom scroll bar *****************************/
+
+html {
+    scroll-behavior: smooth;
+  }
 
 .customScroll {
     position: fixed;
