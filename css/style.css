@@ -12,18 +12,18 @@
     font-family: urwdin;
 }
 
-body {
-    height: 2000px;
-}
-
 @font-face {
     font-family: urwdin;
     src: url(../tools/font/URWDIN/URWDIN-Medium.ttf);
 }
 
+/*********************************** header **************************/
+
 header {
     width: 100%;
     height: 70px;
+    position: fixed;
+    z-index: 1000;
 }
 
 .header {
@@ -76,10 +76,123 @@ header {
 .rightHeader > ul > li > a {
     display: block;
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
+}
+
+/********************************** main ****************************/
+
+.main {
+    width: 100%;
+    height: auto;
+}
+
+.parts {
+    width: 100%;
+    height: 680px;
+    display: flex;
+    background-color: var(--lightColor);
+}
+
+.leftParts {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.leftParts > .pageNumber > span {
+    display: block;
+    font-size: 80px;
+    color: var(--lightInLight);
+}
+
+.leftParts > .yLine > span {
+    display: block;
+    width: 2px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: rgb(112, 112, 112);
+}
+
+.leftParts > .text  {
+    letter-spacing: 1px;
+    height: 110px;
+    font-size: 12px;
+    transform: rotate(-90deg);
+    color: rgb(119, 119, 119);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    
+}
+
+.rightParts {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.rightParts > .title {
+    margin-bottom: 10px;
+}
+
+.rightParts > .title > span {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.rightParts > .xLine {
+    width: 30px;
+    height: 3px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    background-color: rgb(0, 0, 0);
+}
+
+.rightParts > .description {
+    color: rgb(119, 119, 119);
+    font-size: 16px;
+    width: 500px;
 }
 
 /******************************* custom scroll bar *****************************/
+
+.customScroll {
+    position: fixed;
+    top: 50%;
+    transform: translatey(-50%);
+    right: 0;
+}
+
+.customScroll > ul {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin-right: 8px;
+}
+
+.customScroll > ul > li {
+    margin: 8px;
+    width: 12px;
+    height: 3px;
+    border-radius: 20px;
+    background-color: var(--lightInLight);
+    cursor: pointer;
+}
+
+.customScroll > ul > li.active {
+    background-color: var(--darkColor);
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 4px;
