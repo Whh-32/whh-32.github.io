@@ -1,7 +1,104 @@
+:root {
+    --darkColor: #585856;
+    --darkInDark: #797979;
+    --lightColor: #ececec;
+    --lightInLight: #dbdbdb;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
+    font-family: urwdin;
 }
 
+body {
+    height: 2000px;
+}
+
+@font-face {
+    font-family: urwdin;
+    src: url(../tools/font/URWDIN/URWDIN-Medium.ttf);
+}
+
+header {
+    width: 100%;
+    height: 70px;
+}
+
+.header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.leftHeader {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: var(--lightColor);
+}
+
+.leftHeader > span {
+    font-size: 18px;
+    font-weight: 900;
+    margin-left: 20px;
+    cursor: default;
+}
+
+.rightHeader {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background-color: var(--lightColor);
+}
+
+.rightHeader > ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row-reverse;
+    list-style: none;
+}
+
+.rightHeader > ul > li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100%;
+}
+
+.rightHeader > ul > li > a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+/******************************* custom scroll bar *****************************/
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+    display: none;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(100, 100, 100);
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
