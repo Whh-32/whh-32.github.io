@@ -43,7 +43,7 @@ header {
     background-color: var(--lightColor);
 }
 
-.leftHeader > span {
+.leftHeader>span {
     font-size: 18px;
     font-weight: 900;
     margin-left: 20px;
@@ -59,7 +59,11 @@ header {
     background-color: var(--lightColor);
 }
 
-.rightHeader > ul {
+.menu {
+    display: none;
+}
+
+.rightHeader>.subMenu {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,7 +71,7 @@ header {
     list-style: none;
 }
 
-.rightHeader > ul > li {
+.rightHeader>.subMenu>li {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,7 +79,7 @@ header {
     height: 100%;
 }
 
-.rightHeader > ul > li > a {
+.rightHeader>.subMenu>li>a {
     display: block;
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -105,13 +109,13 @@ header {
     flex-flow: column;
 }
 
-.leftParts > .pageNumber > span {
+.leftParts>.pageNumber>span {
     display: block;
     font-size: 80px;
     color: var(--lightInLight);
 }
 
-.leftParts > .yLine > span {
+.leftParts>.yLine>span {
     display: block;
     width: 2px;
     height: 50px;
@@ -119,7 +123,7 @@ header {
     background-color: rgb(112, 112, 112);
 }
 
-.leftParts > .text  {
+.leftParts>.text {
     letter-spacing: 1px;
     height: 110px;
     font-size: 12px;
@@ -129,7 +133,7 @@ header {
     align-items: center;
     justify-content: center;
     font-weight: 900;
-    
+
 }
 
 .rightParts {
@@ -141,17 +145,17 @@ header {
     flex-flow: column;
 }
 
-.rightParts > .title {
+.rightParts>.title {
     margin-bottom: 10px;
 }
 
-.rightParts > .title > span {
+.rightParts>.title>span {
     color: rgb(0, 0, 0);
     font-size: 20px;
     font-weight: 900;
 }
 
-.rightParts > .xLine {
+.rightParts>.xLine {
     width: 30px;
     height: 3px;
     border-radius: 20px;
@@ -159,7 +163,7 @@ header {
     background-color: rgb(0, 0, 0);
 }
 
-.rightParts > .description {
+.rightParts>.description {
     color: rgb(119, 119, 119);
     font-size: 16px;
     max-width: 500px;
@@ -172,34 +176,35 @@ header {
     background-color: var(--darkColor);
 }
 
-.dark >.leftParts > .pageNumber > span {
+.dark>.leftParts>.pageNumber>span {
     color: var(--darkInDark);
 }
 
-.dark > .leftParts > .yLine > span {
+.dark>.leftParts>.yLine>span {
     background-color: rgb(230, 230, 230);
 }
 
-.dark > .leftParts > .text  {
-    color: rgb(212, 212, 212);   
+.dark>.leftParts>.text {
+    color: rgb(212, 212, 212);
 }
 
-.dark > .rightParts > .title > span {
+.dark>.rightParts>.title>span {
     color: rgb(255, 255, 255);
 }
 
-.dark > .rightParts > .xLine {
+.dark>.rightParts>.xLine {
     background-color: rgb(255, 255, 255);
 }
 
-.dark > .rightParts > .description {
+.dark>.rightParts>.description {
     color: rgb(196, 196, 196);
 }
+
 /******************************* custom scroll bar *****************************/
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
 .customScroll {
     position: fixed;
@@ -208,7 +213,7 @@ html {
     right: 0;
 }
 
-.customScroll > ul {
+.customScroll>ul {
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -217,7 +222,7 @@ html {
     margin-right: 8px;
 }
 
-.customScroll > ul > li {
+.customScroll>ul>li {
     margin: 8px;
     width: 12px;
     height: 3px;
@@ -226,37 +231,61 @@ html {
     cursor: pointer;
 }
 
-.customScroll > ul > li.dark {
+.customScroll>ul>li.dark {
     background-color: var(--darkInDark);
 }
 
-.customScroll > ul > li.active {
+.customScroll>ul>li.active {
     background-color: var(--darkColor);
 }
 
-.customScroll > ul > li.dark.active {
+.customScroll>ul>li.dark.active {
     background-color: var(--lightColor);
 }
 
 /* width */
 ::-webkit-scrollbar {
     width: 4px;
-    /* display: none; */
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
+    display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
     background: #f1f1f1;
     border-radius: 10px;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
     background: rgb(100, 100, 100);
     border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
     background: #555;
-  }
+}
+
+/******************************** other device **********************/
+
+@media only screen and (max-width: 480px) {
+    .menu {
+        display: flex;
+        flex-flow: column;
+        list-style: none;
+        margin-right: 20px;
+    }
+
+    .menu>li {
+        width: 20px;
+        height: 2px;
+        background-color: rgb(0, 0, 0);
+        margin: 3px 0;
+        border-radius: 20px;
+    }
+
+    .subMenu li {
+        display: none !important;
+    }
+
+}
