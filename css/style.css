@@ -162,7 +162,8 @@ header {
 .rightParts > .description {
     color: rgb(119, 119, 119);
     font-size: 16px;
-    width: 500px;
+    max-width: 500px;
+    margin-right: 20px;
 }
 
 /********************************** dark parts ******************************/
@@ -191,10 +192,8 @@ header {
     background-color: rgb(255, 255, 255);
 }
 
-.rightParts > .description {
-    color: rgb(185, 185, 185);
-    font-size: 16px;
-    width: 500px;
+.dark > .rightParts > .description {
+    color: rgb(196, 196, 196);
 }
 /******************************* custom scroll bar *****************************/
 
