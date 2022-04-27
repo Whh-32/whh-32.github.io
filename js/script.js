@@ -9,13 +9,13 @@ function checkScroll() {
     newScroll = this.scrollY
     if (newScroll > scroll) {
         nav.style.top = "-70px"
+        menu.classList.remove("active");
+        subMenu.classList.remove("active");
     } else if (newScroll == 0) {
         nav.style.top = "0px"
     }
     scroll = newScroll
 }
-
-
 
 for (let i = 0; i < customScroll.length; i++) {
     customScroll[i].addEventListener("click", () => {
@@ -39,4 +39,12 @@ for (let i = 0; i < customScroll.length; i++) {
             }
         }
     }
+}
+
+let menu = document.querySelector(".menu");
+let subMenu = document.querySelector(".subMenu")
+menu.addEventListener("click", clickMenu);
+function clickMenu() {
+    menu.classList.toggle("active");
+    subMenu.classList.toggle("active");
 }
