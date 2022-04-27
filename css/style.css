@@ -325,6 +325,7 @@ html {
 
     .subMenu>li {
         margin: 15px;
+        justify-content: flex-end;
     }
 
 }
