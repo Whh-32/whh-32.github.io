@@ -91,7 +91,7 @@ header {
 
 .parts {
     width: 100%;
-    height: 680px;
+    height: 100vh;
     display: flex;
     background-color: var(--lightColor);
 }
@@ -223,18 +223,26 @@ html {
     width: 12px;
     height: 3px;
     border-radius: 20px;
-    background-color: var(--lightInLight);
+    background-color: #b3b3b3;
     cursor: pointer;
+}
+
+.customScroll > ul > li.dark {
+    background-color: var(--darkInDark);
 }
 
 .customScroll > ul > li.active {
     background-color: var(--darkColor);
 }
 
+.customScroll > ul > li.dark.active {
+    background-color: var(--lightColor);
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 4px;
-    display: none;
+    /* display: none; */
   }
   
   /* Track */
