@@ -40,7 +40,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: start;
-    background-color: var(--lightColor);
+    /* background-color: var(--lightColor); */
 }
 
 .leftHeader>span {
@@ -56,7 +56,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    background-color: var(--lightColor);
+    /* background-color: var(--lightColor); */
 }
 
 .menu {
@@ -97,6 +97,7 @@ header {
     width: 100%;
     height: 100vh;
     display: flex;
+    position: relative;
     background-color: var(--lightColor);
 }
 
@@ -155,6 +156,12 @@ header {
     font-weight: 900;
 }
 
+.small {
+    font-size: 12px !important;
+    color: rgb(233, 233, 233) !important;
+    font-weight: 900 !important;
+}
+
 .rightParts>.xLine {
     width: 30px;
     height: 3px;
@@ -166,8 +173,49 @@ header {
 .rightParts>.description {
     color: rgb(119, 119, 119);
     font-size: 16px;
-    max-width: 500px;
+    max-width: 450px;
     margin-right: 25px;
+    line-height: 25px;
+}
+
+.image {
+    width: auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.image>img {
+    position: relative;
+    right: -80px;
+    display: block;
+    width: 900px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.link>a {
+    font-size: 14px;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link>.fleshIcon {
+    display: block;
+    background: url(../images/icons8-chevron-right-30.png);
+    background-size: cover;
+    width: 13px;
+    height: 13px;
+    position: relative;
+    top: 0;
+    margin-left: 2px;
 }
 
 /********************************** dark parts ******************************/
@@ -207,6 +255,7 @@ html {
 }
 
 .customScroll {
+    z-index: 2000;
     position: fixed;
     top: 50%;
     transform: translatey(-50%);
@@ -325,6 +374,7 @@ html {
 
     .subMenu>li {
         margin: 15px;
+        justify-content: flex-end !important;
     }
 
 }
