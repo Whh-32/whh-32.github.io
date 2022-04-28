@@ -40,7 +40,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: start;
-    /* background-color: var(--lightColor); */
+    background-color: var(--lightColor);
 }
 
 .leftHeader>span {
@@ -56,7 +56,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    /* background-color: var(--lightColor); */
+    background-color: var(--lightColor);
 }
 
 .menu {
