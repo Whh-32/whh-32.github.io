@@ -374,7 +374,11 @@ html {
 
     .subMenu>li {
         margin: 15px;
+<<<<<<< HEAD
         justify-content: flex-end !important;
+=======
+        justify-content: flex-end;
+>>>>>>> 0f6b4c07a7f398b858e4732862bdc9a93b8bdfac
     }
 
 }
