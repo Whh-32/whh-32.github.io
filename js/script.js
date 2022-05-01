@@ -17,6 +17,8 @@ function checkScroll() {
     scroll = newScroll
 }
 
+let liquid1 = document.querySelector(".liquid");
+let liquid2 = document.querySelector(".liquid2");
 for (let i = 0; i < customScroll.length; i++) {
     customScroll[i].addEventListener("click", () => {
         window.scrollTo(0, parts[i].offsetTop);
@@ -37,6 +39,14 @@ for (let i = 0; i < customScroll.length; i++) {
                     element.classList.remove("dark")
                 });
             }
+        }
+        //liquid active on page 4
+        if (newScroll >= (window.innerHeight * 3) - window.innerHeight / 2) {
+            liquid1.classList.add("active");
+            liquid2.classList.add("active");
+        } else {
+            liquid1.classList.remove("active");
+            liquid2.classList.remove("active");
         }
     }
 }

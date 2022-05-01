@@ -32,6 +32,7 @@ header {
     width: 100%;
     height: 100%;
     display: flex;
+    background-color: var(--lightColor);
 }
 
 .leftHeader {
@@ -40,7 +41,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: start;
-    background-color: var(--lightColor);
 }
 
 .leftHeader>span {
@@ -56,7 +56,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    background-color: var(--lightColor);
 }
 
 .menu {
@@ -147,7 +146,7 @@ header {
 }
 
 .rightParts>.container {
-    width: 40%;
+    width: 45%;
     height: 100%;
     display: flex;
     align-items: flex-start;
@@ -188,7 +187,7 @@ header {
 }
 
 .imageContainer {
-    width: 60%;
+    width: 55%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -206,6 +205,63 @@ header {
     height: 350px;
 }
 
+.image>a>.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    min-height: 45px;
+    border-radius: 50%;
+    background-color: rgb(235, 235, 235);
+    position: absolute;
+}
+
+.image>a:nth-child(1)>.icon {
+    left: 71px;
+    top: 108px;
+    animation: iconAnimate 2500ms 800ms infinite;
+}
+
+.image>a:nth-child(2)>.icon {
+    left: 118px;
+    top: 207px;
+    animation: iconAnimate 2500ms 300ms infinite;
+}
+
+.image>a:nth-child(3)>.icon {
+    left: 195px;
+    top: 207px;
+    animation: iconAnimate 2500ms 100ms infinite;
+}
+
+.image>a:nth-child(4)>.icon {
+    left: 158px;
+    top: 108px;
+    animation: iconAnimate 2500ms 400ms infinite;
+}
+
+.image>a:nth-child(5)>.icon {
+    left: 237px;
+    top: 108px;
+    animation: iconAnimate 2500ms 200ms infinite;
+}
+
+.image>a>.icon>img {
+    width: 30px;
+}
+
+@keyframes iconAnimate {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(10px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
 .imageContainer>.image>img {
     position: relative;
     display: block;
@@ -215,12 +271,14 @@ header {
 }
 
 .link {
+    width: 115px;
     display: flex;
     align-items: center;
     margin-top: 10px;
+    cursor: pointer;
 }
 
-.link :hover {
+.link:hover a {
     color: rgb(255, 255, 255);
 }
 
@@ -291,6 +349,82 @@ header {
 
 .dark>.rightParts>.imageContainer>.image {
     background-color: var(--darkInDark);
+}
+
+.skills {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.box>span {
+    margin-top: 10px;
+    color: rgb(221, 221, 221);
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.contain {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background-color: var(--darkInDark);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.contain>span {
+    color: var(--lightInLight);
+    z-index: 500;
+    font-size: 16px;
+}
+
+.liquid {
+    position: absolute;
+    top: 100%;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(22, 189, 97, 0.699);
+    animation: liquid 2500ms ease-in-out infinite;
+    transition: all 2500ms ease-out;
+}
+
+.liquid2 {
+    position: absolute;
+    top: 100%;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(25, 206, 85, 0.589);
+    animation: liquid 2500ms 400ms ease-in-out infinite;
+    transition: all 2500ms ease-out;
+}
+
+.liquid.active, .liquid2.active {
+    top: 45%;
+}
+
+@keyframes liquid {
+    0%,100% {clip-path: polygon(0 9%, 9% 7%, 18% 7%, 28% 9%, 40% 13%, 53% 17%, 68% 18%, 82% 17%, 92% 15%, 100% 11%, 100% 100%, 0% 100%);
+    }
+    50% {clip-path: polygon(0 11%, 11% 14%, 23% 16%, 36% 16%, 55% 13%, 69% 10%, 78% 6%, 86% 5%, 94% 6%, 100% 9%, 100% 100%, 0% 100%);
+    }
 }
 
 /******************************* custom scroll bar *****************************/
