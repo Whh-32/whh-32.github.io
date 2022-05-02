@@ -401,7 +401,7 @@ header {
     top: 100%;
     width: 100px;
     height: 100px;
-    background-color: rgba(22, 189, 97, 0.699);
+    background-color: rgba(148, 20, 20, 0.699);
     animation: liquid 2500ms ease-in-out infinite;
     transition: all 2500ms ease-out;
 }
@@ -411,7 +411,7 @@ header {
     top: 100%;
     width: 100px;
     height: 100px;
-    background-color: rgba(25, 206, 85, 0.589);
+    background-color: rgba(196, 29, 29, 0.589);
     animation: liquid 2500ms 400ms ease-in-out infinite;
     transition: all 2500ms ease-out;
 }
