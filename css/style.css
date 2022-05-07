@@ -219,7 +219,7 @@ header {
 .image>a:nth-child(1)>.icon {
     left: 71px;
     top: 108px;
-    animation: iconAnimate 2500ms 800ms infinite;
+    animation: iconAnimate 2500ms 600ms infinite;
 }
 
 .image>a:nth-child(2)>.icon {
@@ -376,6 +376,7 @@ header {
     color: rgb(221, 221, 221);
     font-weight: 900;
     font-size: 15px;
+    text-align: center;
 }
 
 .contain {

@@ -44,15 +44,19 @@ for (let i = 0; i < customScroll.length; i++) {
 
 window.addEventListener("scroll", skillsCheck);
 function skillsCheck() {
-    for (let i = 0; i < box.length; i++) {
+    if (newScroll >= (window.innerHeight * 3) - window.innerHeight / 2) {
+        for (let i = 0; i < box.length; i++) {
             box[i].children[0].children[0].innerHTML = skills[i].percent + "%";
             box[i].children[1].innerHTML = skills[i].name;
             box[i].children[0].children[1].style.backgroundColor = skills[i].colors[0];
             box[i].children[0].children[2].style.backgroundColor = skills[i].colors[1];
             box[i].children[0].children[1].style.top = skills[i].height;
             box[i].children[0].children[2].style.top = skills[i].height;
+        }
     }
 }
+
+
 
 let menu = document.querySelector(".menu");
 let subMenu = document.querySelector(".subMenu");
